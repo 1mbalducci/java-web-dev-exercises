@@ -77,6 +77,21 @@ public class Student {
         this.numberOfCredits = numberOfCredits;
     }
 
+    public static String getGradeLevel(int credits ){
+        if (this.credits <= 29){
+            return "freshman";
+        } else if (credits <= 59){
+            return "sophmore";
+        } else if (credits <= 89) {
+            return "junior";
+        } else {
+            return "senior";
+        }
+
+    }
+
+
+
     public static void main(String[] args) {
         Student sally = new Student("Sally",1,1,4.0);
         System.out.println("The Student class works! " + sally.getName() + " is a student!");
